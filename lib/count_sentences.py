@@ -27,9 +27,9 @@ class MyString:
 
     def count_sentences(self):
         import re
-        
+        # Split the value on sentence-ending punctuation marks
         sentences = re.split(r'[.!?]', self._value)
-       
+        # Filter out any empty strings from the list
         non_empty_sentences = [s for s in sentences if s.strip()]
         return len(non_empty_sentences)
 
